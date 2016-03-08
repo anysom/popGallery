@@ -8,4 +8,50 @@
   <body>
     <h1>Pop Gallery - demonstration</h1>
 
+    <div class="pop-gallery">
+      <div class="pop-gallery__item">
+        <div class="pop-gallery__teaser">
+          <strong>Photo shoot</strong>
+        </div>
+        <div class="pop-gallery__sub-gallery">
+          <img src="assets/1.jpg" alt=""/>
+          <img src="assets/2.jpg" alt=""/>
+          <img src="assets/3.jpg" alt=""/>
+          <img src="assets/4.jpg" alt=""/>
+          <img src="assets/5.jpg" alt=""/>
+        </div>
+      </div>
+      <div class="pop-gallery__item">
+        <div class="pop-gallery__teaser">
+          <strong>Photo shoot</strong>
+        </div>
+        <div class="pop-gallery__sub-gallery">
+          <img src="assets/1.jpg" alt=""/>
+          <img src="assets/2.jpg" alt=""/>
+          <img src="assets/3.jpg" alt=""/>
+          <img src="assets/4.jpg" alt=""/>
+          <img src="assets/5.jpg" alt=""/>
+        </div>
+      </div>
+      <div class="pop-gallery__item">
+        <div class="pop-gallery__teaser">
+          <strong>Photo shoot</strong>
+        </div>
+        <div class="pop-gallery__sub-gallery">
+          <img src="assets/1.jpg" alt=""/>
+          <img src="assets/2.jpg" alt=""/>
+          <img src="assets/3.jpg" alt=""/>
+          <img src="assets/4.jpg" alt=""/>
+          <img src="assets/5.jpg" alt=""/>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+      var popGalleryElem = $('.pop-gallery');
+      var popGallery = new PopGallery(popGalleryElem);
+    </script>
+  </body>
 </html>

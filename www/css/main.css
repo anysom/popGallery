@@ -1,2 +1,30 @@
 /*The styling in this file are not part of PopGallery.
 It is only for demonstration purposes on the test page.*/
+
+.pop-gallery__item {
+  width: 33%;
+  float: left;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+
+.pop-gallery__teaser {
+  width: 100%;
+  height: 100px;
+  background: #eee;
+}
+
+
+.pop-gallery__sub-gallery {
+  background-color: #eee;
+  padding-top: 30px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 10px -5px rgba(0,0,0,.3);
+  margin-bottom: 50px;
+}
+
+.pop-gallery__sub-gallery-display {
+  float: left;
+  width: 100%;
+}
