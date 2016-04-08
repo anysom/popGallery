@@ -22,15 +22,17 @@
       transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out 0.3s;
     }
 
-    .arrow-container {
-      position: relative;
-      z-index: 1;
-      height: 17px;
-      width: 17px;
-      bottom: -1px;
-      transform: translateX(-50%);
+    .open-indicator {
+      position: absolute;
+      right: 0;
+      //position: relative;
+      //z-index: 1;
+      //height: 17px;
+      //width: 17px;
+      //bottom: -1px;
+      //transform: translateX(-50%);
 
-      &.arrow-pos-left {
+      /*&.arrow-pos-left {
         left: 10%;
       }
 
@@ -66,7 +68,7 @@
         top: 0;
         left: 0;
         z-index: 1;
-      }
+      }*/
     }
 
     .pop-gallery__sub-gallery {

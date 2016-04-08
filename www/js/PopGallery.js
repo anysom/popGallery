@@ -25,12 +25,13 @@
   var PopGallery = function(elem) {
     var galleryItems = elem.find('.pop-gallery__item');
     var cols;
+    var colWidth;
     var self = this;
 
     var initialize = function () {
         //determine cols pr row
         var width = $(window).width();
-        var colWidth = galleryItems[0].getBoundingClientRect().width;
+        colWidth = galleryItems[0].getBoundingClientRect().width;
         cols = Math.floor(width/colWidth);
     };
 
@@ -52,6 +53,7 @@
             indexDiff = cols - modulus;
         }
 
+        //calculate the index of the item to apend the sub gallery after.
         var targetIndex = thisIndex + indexDiff;
 
         if (targetIndex >= galleryItems.length) {
@@ -63,16 +65,19 @@
         var subGallery = clickedItem.find('.pop-gallery__sub-gallery').clone();
 
         //generate arrow position class
-        var side = 'left';
+        /*var side = 'left';
         if (modulus === 2 || cols === 1) {
             side = 'center';
         } else if (modulus === 0) {
             side = 'right';
         }
-        var arrowPositionClass = 'arrow-pos-' + side;
+        var arrowPositionClass = 'arrow-pos-' + side;*/
+
+        //calcuate indicator position
+        var indicatorStyles = 'width: ' + colWidth + 'px; right:' + colWidth*indexDiff + 'px;';
 
         var galleryDisplaySection = $('<div class="pop-gallery__sub-gallery-display col-sm-12"></div>');
-        galleryDisplaySection.append($('<div class="arrow-container ' + arrowPositionClass + '"></div>'));
+        galleryDisplaySection.append($('<div class="open-indicator" style="'+ indicatorStyles + '"></div>'));
         galleryDisplaySection.append(subGallery);
 
         setTimeout(function () {
